@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse Mojo School & Office Supplies' full product catalog — writing materials, school & office supplies, arts & crafts, and more. Order direct for lowest prices in Las Piñas, Metro Manila." />
+  <meta name="keywords" content="school supplies Las Piñas, office supplies Metro Manila, writing materials Philippines, arts crafts supplies, bulk school supplies" />
+  <meta property="og:title" content="Product Catalog — Mojo School & Office Supplies" />
+  <meta property="og:description" content="112+ school & office essentials. Order direct for the lowest prices — no platform fees!" />
+  <meta property="og:type" content="website" />
+  <title>Product Catalog — Mojo School & Office Supplies</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░░ ANNOUNCEMENT BAR ░░░ -->
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      <span>🎒 Back to School 2026 is HERE!</span>
+      <span class="sep">|</span>
+      <span>🚀 SAME DAY DELIVERY within Metro Manila</span>
+      <span class="sep">|</span>
+      <span>💰 Order Direct = Lowest Prices · No Platform Fees!</span>
+      <span class="sep">|</span>
+      <span>📦 Shop on Shopee &amp; TikTok Shop · Nationwide</span>
+      <span class="sep">|</span>
+      <span>💬 Order via Messenger or WhatsApp</span>
+      <span class="sep">|</span>
+      <span>🏪 Walk-in available in Las Piñas</span>
+      <span class="sep">|</span>
+      <span>🎒 Back to School 2026 is HERE!</span>
+      <span class="sep">|</span>
+      <span>🚀 SAME DAY DELIVERY within Metro Manila</span>
+      <span class="sep">|</span>
+      <span>💰 Order Direct = Lowest Prices · No Platform Fees!</span>
+      <span class="sep">|</span>
+      <span>📦 Shop on Shopee &amp; TikTok Shop · Nationwide</span>
+      <span class="sep">|</span>
+      <span>💬 Order via Messenger or WhatsApp</span>
+      <span class="sep">|</span>
+      <span>🏪 Walk-in available in Las Piñas</span>
+      <span class="sep">|</span>
+    </div>
+  </div>
+
+  <!-- ░░░ NAVIGATION ░░░ -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="logo-circle">
+          <span class="logo-text">mojo</span>
+        </div>
+        <div>
+          <div class="brand-name">Mojo</div>
+          <div class="brand-sub">School &amp; Office Supplies</div>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#how-to-order" class="nav-link">How to Order</a></li>
+          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li><a href="index.html#delivery" class="nav-link">Delivery</a></li>
+          <li><a href="index.html#order-form" class="nav-link">Order Now</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="https://shopee.ph/mojo.sosupplies" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-shopping-bag"></i> Shop Now
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ░░░ CATALOG HERO ░░░ -->
+  <section class="cat-hero">
+    <div class="hero-circle hero-circle-tr" style="opacity:0.15"></div>
+    <div class="hero-circle hero-circle-bl" style="opacity:0.1"></div>
+    <div class="container">
+      <div class="cat-hero-content fade-up">
+        <span class="section-tag-white">112+ Products Available</span>
+        <h1>Product Catalog</h1>
+        <p>School &amp; office essentials for students, teachers, and businesses. Order direct for the lowest prices — no platform fees.</p>
+        <div class="cat-hero-pills">
+          <span><i class="fas fa-bolt"></i> Same-Day Delivery</span>
+          <span><i class="fas fa-tags"></i> Direct = Lowest Prices</span>
+          <span><i class="fas fa-boxes"></i> Bulk Orders Welcome</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ CATALOG SECTION ░░░ -->
+  <section class="catalog-section">
+    <div class="container">
+
+      <!-- CATEGORY FILTERS -->
+      <div class="cat-filter-wrap">
+        <div class="cat-filters" id="catFilters">
+          <button class="cat-btn active" data-cat="all">All Products</button>
+          <button class="cat-btn" data-cat="writing">✏️ Writing Materials</button>
+          <button class="cat-btn" data-cat="school-office">📋 School &amp; Office</button>
+          <button class="cat-btn" data-cat="paper">📓 Paper Supplies</button>
+          <button class="cat-btn" data-cat="arts">🎨 Arts &amp; Crafts</button>
+          <button class="cat-btn" data-cat="packaging">📦 Packaging &amp; Wrapping</button>
+          <button class="cat-btn" data-cat="bundles">🎒 Bundles</button>
+        </div>
+      </div>
+
+      <!-- META ROW -->
+      <div class="catalog-meta">
+        <span id="productCount">Showing all products</span>
+        <span class="catalog-meta-note"><i class="fas fa-info-circle"></i> Prices are per piece unless noted · <strong>Photos coming soon</strong></span>
+      </div>
+
+      <!-- PRODUCT GRID (populated by products.js) -->
+      <div class="catalog-grid" id="catalogGrid"></div>
+
+      <!-- BOTTOM CTA -->
+      <div class="catalog-bottom-cta fade-up">
+        <div class="catalog-bottom-cta-inner">
+          <div class="cbc-text">
+            <h3>Can't find what you need?</h3>
+            <p>We carry 112+ products. Message us and we'll find exactly what you're looking for — or check our full Shopee store.</p>
+          </div>
+          <div class="cbc-btns">
+            <a href="https://shopee.ph/mojo.sosupplies" target="_blank" rel="noopener" class="btn btn-shopee">
+              <i class="fas fa-store-alt"></i> Browse All on Shopee
+            </a>
+            <a href="https://wa.me/639369571663?text=Hi%20Mojo!%20I%27m%20looking%20for%20a%20product%20and%20can%27t%20find%20it%20on%20the%20website." target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> Ask via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ░░░ FOOTER ░░░ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-circle logo-circle-sm">
+              <span class="logo-text">mojo</span>
+            </div>
+            <div>
+              <div class="brand-name" style="color:#fff">Mojo</div>
+              <div class="brand-sub" style="color:rgba(255,255,255,0.7)">School &amp; Office Supplies</div>
+            </div>
+          </div>
+          <p>Your School and Office Essentials. Serving Metro Manila and beyond since 2020.</p>
+          <p class="footer-reg">✓ DTI Registered &nbsp;·&nbsp; ✓ SEC Registered</p>
+          <div class="footer-delivery-note">
+            <i class="fas fa-bolt"></i> Same-Day Delivery · Metro Manila · Mon–Fri
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#how-to-order">How to Order</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="index.html#delivery">Delivery Options</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop With Us</h4>
+          <ul>
+            <li><a href="https://shopee.ph/mojo.sosupplies" target="_blank">Shopee Store</a></li>
+            <li><a href="https://m.me/mojo.sosupplies" target="_blank">Facebook Messenger</a></li>
+            <li><a href="https://wa.me/639369571663" target="_blank">WhatsApp Order</a></li>
+            <li><a href="index.html#contact">Visit Our Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/mojo.sosupplies" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/mojo.sosupplies" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.tiktok.com/@mojo.sosupplies" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a>
+            <a href="https://shopee.ph/mojo.sosupplies" target="_blank" rel="noopener"><i class="fas fa-store"></i> Shopee</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Mojo School &amp; Office Supplies. All rights reserved.</p>
+        <p>Made with ❤️ in Las Piñas, Metro Manila</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ░░░ FLOATING BUTTONS ░░░ -->
+  <a href="https://wa.me/639369571663" target="_blank" rel="noopener" class="fab-btn fab-wa" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <button class="fab-btn fab-top" id="backToTop" aria-label="Back to top" style="display:none">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>
