@@ -148,6 +148,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .btn-shopee  { background: var(--shopee-red); color: var(--white); }
 .btn-shopee:hover  { background: #c93d22; transform: translateY(-2px); }
+.btn-tiktok  { background: #000; color: var(--white); }
+.btn-tiktok:hover  { background: #333; transform: translateY(-2px); }
 
 .btn-messenger { background: var(--messenger); color: var(--white); }
 .btn-messenger:hover { background: #0055cc; transform: translateY(-2px); }
@@ -582,7 +584,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .order-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 40px;
 }
@@ -1105,7 +1107,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-actions  { justify-content: center; }
   .hero-delivery-pill { justify-content: center; }
 
-  .order-grid    { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto 40px; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid      { grid-template-columns: repeat(2, 1fr); }
   .contact-grid  { grid-template-columns: 1fr; }
@@ -1155,7 +1156,120 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   .order-form-wrap { padding: 28px 20px; }
   .order-form .form-row { grid-template-columns: 1fr; }
+  .order-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto 40px; }
+  .bulk-inner { grid-template-columns: 1fr; gap: 40px; }
+  .direct-strip-divider { display: none; }
+  .direct-strip-inner { gap: 16px; }
 }
+
+/* ══════════════════════════════════════════
+   DIRECT ORDER BENEFITS STRIP
+══════════════════════════════════════════ */
+
+.direct-strip {
+  background: var(--dark);
+  padding: 22px 0;
+}
+.direct-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.direct-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--white);
+  flex: 1;
+  min-width: 180px;
+}
+.direct-strip-item i {
+  font-size: 1.4rem;
+  color: var(--yellow);
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+.direct-strip-item strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.direct-strip-item span {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+}
+.direct-strip-divider {
+  width: 1px;
+  height: 42px;
+  background: rgba(255,255,255,0.12);
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════
+   BULK ORDERS SECTION
+══════════════════════════════════════════ */
+
+.bulk-section {
+  background: linear-gradient(135deg, #0A1628 0%, var(--dark-2) 60%, #0D2040 100%);
+  padding: 88px 0;
+  color: var(--white);
+}
+.bulk-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.bulk-content h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--white);
+  margin: 12px 0 16px;
+  line-height: 1.2;
+}
+.bulk-content > p {
+  color: rgba(255,255,255,0.72);
+  line-height: 1.75;
+  font-size: 1rem;
+  margin-bottom: 28px;
+}
+.bulk-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 36px;
+}
+.bulk-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+}
+.bulk-list li i { color: var(--yellow); flex-shrink: 0; }
+.bulk-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.bulk-visual { display: flex; flex-direction: column; gap: 18px; }
+.bulk-stat {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 22px 28px;
+  transition: background var(--transition);
+}
+.bulk-stat:hover { background: rgba(255,255,255,0.11); }
+.bulk-num {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--yellow);
+  margin-bottom: 4px;
+  line-height: 1;
+}
+.bulk-label { font-size: 0.82rem; color: rgba(255,255,255,0.6); }
 
 /* ══════════════════════════════════════════
    ORDER FORM SECTION
