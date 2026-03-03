@@ -241,7 +241,7 @@ const CAT_META = {
 function buildWALink(name, price) {
   const priceStr = price ? ` (₱${price})` : '';
   const msg = `Hi Mojo! I'd like to order: ${name}${priceStr}`;
-  return `https://wa.me/639369571663?text=${encodeURIComponent(msg)}`;
+  return `https://api.whatsapp.com/send?phone=639369571663&text=${encodeURIComponent(msg)}`;
 }
 
 
