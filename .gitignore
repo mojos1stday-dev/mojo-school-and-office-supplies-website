@@ -1,0 +1,9 @@
+# Reference screenshots (not part of the website)
+Screenshot*.png
+
+# Claude Code config
+.claude/
+
+# macOS
+.DS_Store
+.AppleDouble
