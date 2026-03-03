@@ -1815,3 +1815,77 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .bulk-use-item span { font-size: 1.3rem; }
   .bulk-use-item strong { font-size: 0.65rem; }
 }
+
+/* =====================================================
+   SUPPLEMENTARY RESPONSIVE OVERRIDES
+   Must be at end of file — fixes cascade source-order
+   bugs where component styles (added after the main
+   responsive block) override the responsive rules.
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .bulk-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .bulk-visual {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .bulk-stat {
+    padding: 16px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .direct-strip-divider { display: none; }
+  .direct-strip-inner {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .direct-strip-item {
+    flex: none;
+    width: calc(50% - 10px);
+    min-width: 0;
+  }
+  .bulk-btns {
+    flex-direction: column;
+  }
+  .bulk-btns .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 580px) {
+  .order-form-wrap {
+    padding: 28px 20px;
+  }
+  .order-form .form-row {
+    grid-template-columns: 1fr;
+  }
+  .bulk-content h2 {
+    font-size: 1.85rem;
+  }
+  .bulk-visual {
+    grid-template-columns: 1fr;
+  }
+  .bulk-btns {
+    flex-direction: column;
+  }
+  .bulk-btns .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .direct-strip-item {
+    width: 100%;
+  }
+  .direct-strip-inner {
+    gap: 14px;
+  }
+  .section-header {
+    margin-bottom: 36px;
+  }
+}
