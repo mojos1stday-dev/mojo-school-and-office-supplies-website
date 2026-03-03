@@ -67,6 +67,7 @@
           <li><a href="#how-to-order" class="nav-link">How to Order</a></li>
           <li><a href="#products" class="nav-link">Products</a></li>
           <li><a href="#delivery" class="nav-link">Delivery</a></li>
+          <li><a href="#order-form" class="nav-link">Order Now</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <a href="https://shopee.ph/mojo.sosupplies" target="_blank" rel="noopener" class="btn btn-primary">
@@ -256,6 +257,107 @@
           <span class="payment-badge">🛒 ShopeePay</span>
           <span class="payment-badge">📦 COD</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ ORDER FORM ░░░ -->
+  <section class="section order-form-section" id="order-form">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Order Directly</span>
+        <h2>Place Your Order</h2>
+        <p>Fill out the form below and we'll contact you within 30 minutes to confirm your order and arrange payment.</p>
+      </div>
+
+      <div class="order-form-wrap fade-up">
+
+        <!-- ✅ SUCCESS STATE (shown after submit) -->
+        <div class="form-success" id="formSuccess" style="display:none">
+          <div class="success-icon">✅</div>
+          <h3>Order Received!</h3>
+          <p>Thank you! We'll reach out shortly via SMS, WhatsApp, or Messenger to confirm your order.</p>
+          <div class="success-btns">
+            <a href="https://wa.me/639369571663" target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> Follow Up on WhatsApp
+            </a>
+            <a href="https://m.me/mojo.sosupplies" target="_blank" rel="noopener" class="btn btn-messenger">
+              <i class="fab fa-facebook-messenger"></i> Message on Messenger
+            </a>
+          </div>
+        </div>
+
+        <!-- 📋 ORDER FORM -->
+        <!-- NOTE: Replace "YOUR_FORM_ID" below with your Formspree form ID -->
+        <!-- Get a free one at: https://formspree.io -->
+        <form class="order-form" id="orderForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Full Name <span class="required">*</span></label>
+              <input type="text" id="fname" name="name" placeholder="Juan dela Cruz" required />
+            </div>
+            <div class="form-group">
+              <label for="fphone">Phone / WhatsApp <span class="required">*</span></label>
+              <input type="tel" id="fphone" name="phone" placeholder="09XX XXX XXXX" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="femail">Email Address <span class="optional">(optional)</span></label>
+            <input type="email" id="femail" name="email" placeholder="your@email.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="faddress">Delivery Address <span class="required">*</span></label>
+            <input type="text" id="faddress" name="address" placeholder="House/Unit No., Street, Barangay, City" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fdelivery">Delivery Option <span class="required">*</span></label>
+              <select id="fdelivery" name="delivery" required>
+                <option value="">Select...</option>
+                <option value="Same-Day Delivery (Metro Manila)">Same-Day Delivery (Metro Manila)</option>
+                <option value="Nationwide Shipping">Nationwide Shipping</option>
+                <option value="Store Pickup (Las Piñas)">Store Pickup (Las Piñas)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fpayment">Payment Method <span class="required">*</span></label>
+              <select id="fpayment" name="payment" required>
+                <option value="">Select...</option>
+                <option value="GCash">GCash</option>
+                <option value="Maya">Maya</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+                <option value="Cash on Pickup">Cash on Pickup</option>
+                <option value="COD (via Shopee)">COD (via Shopee)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fitems">Items / Order Details <span class="required">*</span></label>
+            <textarea id="fitems" name="items" rows="5"
+              placeholder="List what you need, e.g.:&#10;• 10x Pilot G2 0.5 black&#10;• 5x yellow pad, long&#10;• 2x masking tape 1 inch" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="fnotes">Additional Notes <span class="optional">(optional)</span></label>
+            <textarea id="fnotes" name="notes" rows="3"
+              placeholder="Special instructions, preferred delivery time, etc."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-form-submit" id="submitBtn">
+            <i class="fas fa-paper-plane"></i> Send Order Request
+          </button>
+
+          <p class="form-note">
+            <i class="fas fa-lock"></i> Your info is private and only used to process your order.
+            We respond within 30 minutes during business hours (Mon–Fri, 8AM–5PM).
+          </p>
+
+        </form>
       </div>
     </div>
   </section>

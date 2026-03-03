@@ -95,3 +95,45 @@ if (ticker) {
   ticker.addEventListener('mouseenter', () => ticker.style.animationPlayState = 'paused');
   ticker.addEventListener('mouseleave', () => ticker.style.animationPlayState = 'running');
 }
+
+// ── Order Form Submission (Formspree AJAX) ────────────────────
+const orderForm   = document.getElementById('orderForm');
+const formSuccess = document.getElementById('formSuccess');
+const submitBtn   = document.getElementById('submitBtn');
+
+if (orderForm) {
+  orderForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Prevent double-submit
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+    const data = new FormData(orderForm);
+
+    try {
+      const response = await fetch(orderForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        // Show success, hide form
+        orderForm.style.display = 'none';
+        formSuccess.style.display = 'block';
+        // Scroll to success message
+        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        // Show error inline
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Order Request';
+        alert('Something went wrong. Please message us directly on WhatsApp or Messenger.');
+      }
+    } catch {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Order Request';
+      alert('Network error. Please message us directly on WhatsApp or Messenger.');
+    }
+  });
+}
