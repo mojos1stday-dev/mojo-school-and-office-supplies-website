@@ -1748,3 +1748,70 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .cat-hero { padding: 88px 0 48px; }
   .catalog-section { padding: 40px 0 72px; }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   BULK ORDER USE-CASES GRID
+   ═══════════════════════════════════════════════════════════════ */
+
+.bulk-use-cases {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.bulk-use-label {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
+.bulk-use-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 12px;
+}
+
+.bulk-use-item {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 14px;
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+.bulk-use-item:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-2px);
+}
+
+.bulk-use-item span {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.bulk-use-item strong {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .bulk-use-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .bulk-use-grid { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .bulk-use-item { padding: 12px 6px; }
+  .bulk-use-item span { font-size: 1.3rem; }
+  .bulk-use-item strong { font-size: 0.65rem; }
+}
